@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VOLT — учебный магазин техники.">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+
+    <title>VOLT — техника для твоего ритма</title>
+</head>
+<body id="top">
+
+    <!-- Header -->
+
+    <header>
+        <div class="container header">
+            <a class="logo" href="#top" aria-label="VOLT — на главную">
+                <i class="ti ti-arrow-up-right logo-mark" aria-hidden="true"></i>
+                volt.
+            </a>
+
+            <nav aria-label="Основная навигация">
+                <ul class="menu">
+                    <li class="menu-link">
+                        <a class="text-link" href="#products">Товары</a>
+                    </li>
+                    <li class="menu-link">
+                        <a class="text-link" href="#faq">Вопросы и ответы</a>
+                    </li>
+                    <li class="menu-link">
+                        <a class="text-link" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-buttons">
+                <button class="btn btn-light btn-icon btn-theme" type="button" aria-label="Включить тёмную тему" aria-pressed="false" title="Тёмная тема">
+                    <i class="ti ti-moon theme-moon" aria-hidden="true"></i>
+                    <i class="ti ti-sun theme-sun" aria-hidden="true"></i>
+                </button>
+
+                <button class="btn btn-light btn-cart" type="button" aria-haspopup="dialog" aria-controls="cart">
+                    <i class="ti ti-shopping-bag" aria-hidden="true"></i>
+                    <span>Корзина (<span class="cart-count">0</span>)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Main -->
+
+        <section aria-labelledby="main-title">
+            <div class="container">
+                <div class="start-info">
+                    <div class="start-info-content">
+                        <p class="start-info-label">Легче. Быстрее. Твой.</p>
+
+                        <h1 class="start-info-title" id="main-title">
+                            Новый<br>MacBook Air
+                        </h1>
+
+                        <p class="start-info-text">
+                            Лёгкий MacBook Air с чипом M4.<br>
+                            Для больших идей и твоих ежедневных дел.
+                        </p>
+
+                        <a class="btn btn-start-info" href="#products">Подробнее</a>
+                    </div>
+
+                    <img class="start-info-img" src="img/hero-laptop.png" alt="Открытый MacBook Air тёмно-синего цвета" width="1000" height="1077" fetchpriority="high">
+
+                    <p class="start-info-caption">MacBook Air / M4 / 13″</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+
+        <section id="products" aria-labelledby="products-title">
+            <div class="container indent">
+                <div class="products-heading">
+                    <h2 class="section-title" id="products-title">
+                        Техника на каждый день
+                    </h2>
+
+                    <p class="section-text">
+                        Для любимых задач, новых идей<br>
+                        и всего, что между ними.
+                    </p>
+                </div>
+
+                <div class="products">
+                    <article class="product" data-price="99990" data-quantity="0">
+                        <div class="product-picture">
+                            <img class="product-img" src="img/macbook.png" alt="MacBook Air 13 дюймов" width="280" height="245" loading="lazy">
+                        </div>
+
+                        <h3 class="product-title">MacBook Air 13″</h3>
+                        <p class="product-text">M4 · 16 / 256 ГБ · небесно-голубой</p>
+                        <p class="product-price">99 990 ₽</p>
+
+                        <div class="product-buttons">
+                            <button class="btn btn-light btn-product" type="button" data-index="0" data-change="1" aria-label="В корзину: MacBook Air 13″">
+                                <i class="ti ti-shopping-bag" aria-hidden="true"></i>
+                                В корзину
+                            </button>
+
+                            <div class="quantity-control" hidden>
+                                <button class="quantity-button" type="button" data-index="0" data-change="-1" aria-label="Убрать один MacBook Air">
+                                    <i class="ti ti-minus" aria-hidden="true"></i>
+                                </button>
+
+                                <span class="product-count">0</span>
+
+                                <button class="quantity-button" type="button" data-index="0" data-change="1" aria-label="Добавить один MacBook Air">
+                                    <i class="ti ti-plus" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product" data-price="119990" data-quantity="0">
+                        <div class="product-picture">
+                            <img class="product-img" src="img/iphone-pro.png" alt="iPhone 16 Pro Max, чёрный титан" width="280" height="245" loading="lazy">
+                        </div>
+
+                        <h3 class="product-title">iPhone 16 Pro Max</h3>
+                        <p class="product-text">256 ГБ · чёрный титан</p>
+                        <p class="product-price">119 990 ₽</p>
+
+                        <div class="product-buttons">
+                            <button class="btn btn-light btn-product" type="button" data-index="1" data-change="1" aria-label="В корзину: iPhone 16 Pro Max">
+                                <i class="ti ti-shopping-bag" aria-hidden="true"></i>
+                                В корзину
+                            </button>
+
+                            <div class="quantity-control" hidden>
+                                <button class="quantity-button" type="button" data-index="1" data-change="-1" aria-label="Убрать один iPhone 16 Pro Max">
+                                    <i class="ti ti-minus" aria-hidden="true"></i>
+                                </button>
+
+                                <span class="product-count">0</span>
+
+                                <button class="quantity-button" type="button" data-index="1" data-change="1" aria-label="Добавить один iPhone 16 Pro Max">
+                                    <i class="ti ti-plus" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product" data-price="39990" data-quantity="0">
+                        <div class="product-picture">
+                            <img class="product-img" src="img/watch.png" alt="Apple Watch Series 10, серебристый алюминий" width="280" height="245" loading="lazy">
+                        </div>
+
+                        <h3 class="product-title">Apple Watch Series 10</h3>
+                        <p class="product-text">46 мм · серебристый алюминий</p>
+                        <p class="product-price">39 990 ₽</p>
+
+                        <div class="product-buttons">
+                            <button class="btn btn-light btn-product" type="button" data-index="2" data-change="1" aria-label="В корзину: Apple Watch Series 10">
+                                <i class="ti ti-shopping-bag" aria-hidden="true"></i>
+                                В корзину
+                            </button>
+
+                            <div class="quantity-control" hidden>
+                                <button class="quantity-button" type="button" data-index="2" data-change="-1" aria-label="Убрать одни Apple Watch Series 10">
+                                    <i class="ti ti-minus" aria-hidden="true"></i>
+                                </button>
+
+                                <span class="product-count">0</span>
+
+                                <button class="quantity-button" type="button" data-index="2" data-change="1" aria-label="Добавить одни Apple Watch Series 10">
+                                    <i class="ti ti-plus" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product" data-price="34990" data-quantity="0">
+                        <div class="product-picture">
+                            <img class="product-img" src="img/iphone-green.png" alt="iPhone 12, зелёный" width="280" height="245" loading="lazy">
+                        </div>
+
+                        <h3 class="product-title">iPhone 12</h3>
+                        <p class="product-text">128 ГБ · зелёный</p>
+                        <p class="product-price">34 990 ₽</p>
+
+                        <div class="product-buttons">
+                            <button class="btn btn-light btn-product" type="button" data-index="3" data-change="1" aria-label="В корзину: iPhone 12">
+                                <i class="ti ti-shopping-bag" aria-hidden="true"></i>
+                                В корзину
+                            </button>
+
+                            <div class="quantity-control" hidden>
+                                <button class="quantity-button" type="button" data-index="3" data-change="-1" aria-label="Убрать один iPhone 12">
+                                    <i class="ti ti-minus" aria-hidden="true"></i>
+                                </button>
+
+                                <span class="product-count">0</span>
+
+                                <button class="quantity-button" type="button" data-index="3" data-change="1" aria-label="Добавить один iPhone 12">
+                                    <i class="ti ti-plus" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+
+        <section class="faq-section" id="faq" aria-labelledby="faq-title">
+            <div class="container indent">
+                <div class="faq">
+                    <div class="faq-info">
+                        <h2 class="section-title" id="faq-title">
+                            Есть вопрос?<br>Есть ответ.
+                        </h2>
+
+                        <p class="section-text">
+                            Собрали то, что поможет выбрать технику и разобраться с магазином.
+                        </p>
+
+                        <a class="btn faq-link" href="#contacts">Задать свой вопрос</a>
+                    </div>
+
+                    <div>
+                        <div class="faq-item">
+                            <h3>
+                                <button class="faq-question" id="question-1" type="button" aria-expanded="false" aria-controls="answer-1">
+                                    Как выбрать подходящее устройство?
+                                    <i class="ti ti-plus faq-sign" aria-hidden="true"></i>
+                                </button>
+                            </h3>
+
+                            <div class="faq-answer" id="answer-1" role="region" aria-labelledby="question-1" aria-hidden="true">
+                                <div class="faq-answer-inner">
+                                    <p>
+                                        Подумай, для чего оно нужно: учёбы, работы,
+                                        съёмки или повседневных задач. Сравни размер
+                                        экрана и объём памяти в карточках. Если
+                                        остались вопросы, заполни форму ниже.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>
+                                <button class="faq-question" id="question-2" type="button" aria-expanded="false" aria-controls="answer-2">
+                                    Как добавить или убрать товар?
+                                    <i class="ti ti-plus faq-sign" aria-hidden="true"></i>
+                                </button>
+                            </h3>
+
+                            <div class="faq-answer" id="answer-2" role="region" aria-labelledby="question-2" aria-hidden="true">
+                                <div class="faq-answer-inner">
+                                    <p>
+                                        Нажми «В корзину» в карточке — добавится
+                                        одна штука. После этого кнопками «+» и «−»
+                                        можно изменить количество. Нажми на корзину
+                                        в шапке, чтобы увидеть выбранные товары
+                                        и общую сумму.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>
+                                <button class="faq-question" id="question-3" type="button" aria-expanded="false" aria-controls="answer-3">
+                                    Сохраняется ли выбранная тема?
+                                    <i class="ti ti-plus faq-sign" aria-hidden="true"></i>
+                                </button>
+                            </h3>
+
+                            <div class="faq-answer" id="answer-3" role="region" aria-labelledby="question-3" aria-hidden="true">
+                                <div class="faq-answer-inner">
+                                    <p>
+                                        Да, выбор сохраняется в этом браузере,
+                                        если в нём доступно локальное хранилище.
+                                        Вернуться к светлой теме можно той же
+                                        кнопкой в шапке.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>
+                                <button class="faq-question" id="question-4" type="button" aria-expanded="false" aria-controls="answer-4">
+                                    Можно ли оформить настоящий заказ?
+                                    <i class="ti ti-plus faq-sign" aria-hidden="true"></i>
+                                </button>
+                            </h3>
+
+                            <div class="faq-answer" id="answer-4" role="region" aria-labelledby="question-4" aria-hidden="true">
+                                <div class="faq-answer-inner">
+                                    <p>
+                                        Это учебный магазин. Здесь можно выбрать
+                                        товары и посчитать сумму, но оплата
+                                        и доставка не подключены. Цены и контакты
+                                        приведены для демонстрации.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts -->
+
+        <section id="contacts" aria-labelledby="contacts-title">
+            <div class="container indent">
+                <div class="contacts-heading">
+                    <h2 class="section-title" id="contacts-title">
+                        Поможем определиться
+                    </h2>
+                </div>
+
+                <div class="contacts">
+                    <form class="contacts-form">
+                        <h3 class="form-title">Напиши нам</h3>
+
+                        <div class="form-field">
+                            <label for="first-name">Имя *</label>
+                            <input id="first-name" name="first-name" type="text" placeholder="Иван" autocomplete="given-name" minlength="2" maxlength="60" pattern=".*\S.*" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="last-name">Фамилия *</label>
+                            <input id="last-name" name="last-name" type="text" placeholder="Иванов" autocomplete="family-name" minlength="2" maxlength="60" pattern=".*\S.*" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Email *</label>
+                            <input id="email" name="email" type="email" placeholder="ivan@gmail.com" autocomplete="email" maxlength="120" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="phone">Телефон</label>
+                            <input id="phone" name="phone" type="tel" placeholder="+7 (999) 999-99-99" autocomplete="tel" pattern="\+?[0-9\s\(\)\-]{7,22}" title="От 7 до 22 символов: цифры, пробелы, +, скобки и дефис">
+                        </div>
+
+                        <div class="form-field form-wide">
+                            <label for="message">Сообщение *</label>
+                            <textarea id="message" name="message" placeholder="Расскажи, какую технику ищешь…" minlength="10" maxlength="2000" required></textarea>
+                        </div>
+
+                        <button class="btn form-wide" type="submit">Отправить сообщение</button>
+                    </form>
+
+                    <div class="contacts-info">
+                        <div>
+                            <h3 class="contacts-info-title">
+                                Хорошая техника.<br>Понятный выбор.
+                            </h3>
+
+                            <p class="section-text">
+                                Подберём устройство под твои задачи.
+                                Начнём с простого — расскажи, что для тебя важно.
+                            </p>
+                        </div>
+
+                        <div class="contacts-list">
+                            <div>
+                                <p class="contact-title">Email</p>
+                                <a class="text-link contact-text" href="mailto:hello@volt.ru">
+                                    hello@volt.ru
+                                </a>
+                            </div>
+
+                            <div>
+                                <p class="contact-title">Телефон</p>
+                                <a class="text-link contact-text" href="tel:+74950000000">
+                                    +7 (987) 654-32-10
+                                </a>
+                            </div>
+
+                            <div>
+                                <p class="contact-title">Адрес</p>
+                                <address class="contact-text">
+                                    Москва
+                                    <br>
+                                    ул. Ленина, д. 12
+                                </address>
+                            </div>
+
+                            <div>
+                                <p class="contact-title">Время работы</p>
+                                <p class="contact-text">
+                                    Пн — Пт, 10:00–19:00<br>
+                                    Сб — Вс, 11:00–18:00
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer-section">
+        <div class="container footer">
+            <div>
+                <a class="logo" href="#top" aria-label="VOLT — наверх">
+                    <i class="ti ti-arrow-up-right logo-mark" aria-hidden="true"></i>
+                    volt.
+                </a>
+
+                <p class="footer-text">Техника для твоего ритма</p>
+            </div>
+
+            <nav aria-label="Навигация в подвале">
+                <ul class="footer-links">
+                    <li><a class="text-link" href="#products">Товары</a></li>
+                    <li><a class="text-link" href="#faq">FAQ</a></li>
+                    <li><a class="text-link" href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <p class="footer-copy">
+                © 2026 VOLT<br>Москва · КТ 2
+            </p>
+        </div>
+    </footer>
+
+    <!-- Cart -->
+
+    <dialog class="cart" id="cart" aria-labelledby="cart-title">
+        <div class="cart-heading">
+            <h2 class="cart-title" id="cart-title">Твоя корзина</h2>
+
+            <button class="btn btn-light btn-icon cart-close" type="button" aria-label="Закрыть корзину" autofocus>
+                <i class="ti ti-x" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <p class="section-text cart-empty">
+            Пока пусто. Выберите товары, и они появятся в этом списке
+        </p>
+
+        <ul class="cart-list" aria-label="Выбранные товары">
+            <li class="cart-row" hidden>
+                <div>
+                    <strong>MacBook Air 13″</strong>
+                    <p class="cart-row-price">99 990 ₽ за шт.</p>
+                </div>
+
+                <div class="quantity-control">
+                    <button class="quantity-button" type="button" data-index="0" data-change="-1" aria-label="Убрать один MacBook Air">
+                        <i class="ti ti-minus" aria-hidden="true"></i>
+                    </button>
+
+                    <span class="cart-product-count">0</span>
+
+                    <button class="quantity-button" type="button" data-index="0" data-change="1" aria-label="Добавить один MacBook Air">
+                        <i class="ti ti-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </li>
+
+            <li class="cart-row" hidden>
+                <div>
+                    <strong>iPhone 16 Pro Max</strong>
+                    <p class="cart-row-price">119 990 ₽ за шт.</p>
+                </div>
+
+                <div class="quantity-control">
+                    <button class="quantity-button" type="button" data-index="1" data-change="-1" aria-label="Убрать один iPhone 16 Pro Max">
+                        <i class="ti ti-minus" aria-hidden="true"></i>
+                    </button>
+
+                    <span class="cart-product-count">0</span>
+
+                    <button class="quantity-button" type="button" data-index="1" data-change="1" aria-label="Добавить один iPhone 16 Pro Max">
+                        <i class="ti ti-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </li>
+
+            <li class="cart-row" hidden>
+                <div>
+                    <strong>Apple Watch Series 10</strong>
+                    <p class="cart-row-price">39 990 ₽ за шт.</p>
+                </div>
+
+                <div class="quantity-control">
+                    <button class="quantity-button" type="button" data-index="2" data-change="-1" aria-label="Убрать одни Apple Watch Series 10">
+                        <i class="ti ti-minus" aria-hidden="true"></i>
+                    </button>
+
+                    <span class="cart-product-count">0</span>
+
+                    <button class="quantity-button" type="button" data-index="2" data-change="1" aria-label="Добавить одни Apple Watch Series 10">
+                        <i class="ti ti-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </li>
+
+            <li class="cart-row" hidden>
+                <div>
+                    <strong>iPhone 12</strong>
+                    <p class="cart-row-price">34 990 ₽ за шт.</p>
+                </div>
+
+                <div class="quantity-control">
+                    <button class="quantity-button" type="button" data-index="3" data-change="-1" aria-label="Убрать один iPhone 12">
+                        <i class="ti ti-minus" aria-hidden="true"></i>
+                    </button>
+
+                    <span class="cart-product-count">0</span>
+
+                    <button class="quantity-button" type="button" data-index="3" data-change="1" aria-label="Добавить один iPhone 12">
+                        <i class="ti ti-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+
+        <p class="cart-total">
+            <span>Итого</span>
+            <span class="cart-sum">0 ₽</span>
+        </p>
+
+        <button class="btn cart-continue" type="button">Вернуться к товарам</button>
+    </dialog>
+
+</body>
+</html>

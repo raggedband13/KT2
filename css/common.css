@@ -1,0 +1,341 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-400.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-600.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-700.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/oswald-600.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+}
+
+/* Colors */
+
+:root {
+    color-scheme: light;
+    --background: #ffffff;
+    --surface: #f3f3f3;
+    --card: #ffffff;
+    --text: #252525;
+    --muted: #6b6b70;
+    --border: #dedee2;
+    --accent: #ce3e00;
+    --accent-hover: #a93100;
+    --accent-soft: #fff0e7;
+    --on-accent: #ffffff;
+    --hero-text: #252525;
+    --hero-gradient: linear-gradient(120deg, #fff9e5 0%, #e8f5ef 48%, #dff0ff 75%, #ecddff 100%);
+    --contact-gradient: linear-gradient(135deg, #fff5ed, #f0edff);
+    --shadow: 0 12px 40px #15152512;
+}
+
+body.dark-theme {
+    color-scheme: dark;
+    --background: #18191d;
+    --surface: #23252b;
+    --card: #1e2025;
+    --text: #f4f4f6;
+    --muted: #b1b2ba;
+    --border: #3b3d45;
+    --accent: #ff8b54;
+    --accent-hover: #ffa478;
+    --accent-soft: #392b25;
+    --on-accent: #211710;
+    --hero-text: #f4f4f6;
+    --hero-gradient: linear-gradient(120deg, #39352e 0%, #293b3c 48%, #253a50 75%, #39304e 100%);
+    --contact-gradient: linear-gradient(135deg, #352a25, #292637);
+    --shadow: 0 12px 40px #00000026;
+}
+
+/* Base */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+p, h1, h2, h3 {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+button, input, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button, input, textarea {
+    color: inherit;
+}
+
+button:disabled {
+    cursor: default;
+    opacity: 0.35;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Container and typography */
+
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.indent {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+section {
+    scroll-margin-top: 24px;
+}
+
+.section-title {
+    font-size: 42px;
+    letter-spacing: -0.8px;
+}
+
+.section-text {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1.8px;
+}
+
+.logo-mark {
+    color: var(--accent);
+    font-size: 34px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Buttons and links */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 12px 24px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    background-color: var(--accent);
+    color: var(--on-accent);
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-light {
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+.btn-light:hover:not(:disabled) {
+    background-color: var(--border);
+}
+
+.btn-icon {
+    flex-shrink: 0;
+    width: 46px;
+    min-height: 46px;
+    padding: 0;
+    font-size: 24px;
+}
+
+.text-link {
+    transition: color 0.2s;
+}
+
+.text-link:hover {
+    color: var(--accent);
+}
+
+a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* Form fields */
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-field input, .form-field textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--background);
+    line-height: 1.5;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field input:hover, .form-field textarea:hover {
+    border-color: var(--muted);
+}
+
+.form-field input:focus, .form-field textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.form-field input::placeholder, .form-field textarea::placeholder {
+    color: var(--muted);
+    opacity: 1;
+}
+
+.form-field textarea {
+    min-height: 128px;
+    resize: vertical;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Quantity controls */
+
+.quantity-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 48px;
+    border-radius: 100px;
+    background-color: var(--accent-soft);
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.quantity-button {
+    width: 52px;
+    min-height: 48px;
+    padding: 0;
+    border: none;
+    border-radius: 100px;
+    background: transparent;
+    color: inherit;
+    font-size: 28px;
+    line-height: 1;
+    transition: background-color 0.2s;
+}
+
+.quantity-button:hover {
+    background-color: var(--border);
+}
